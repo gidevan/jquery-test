@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="libs/jquery-3.1.1.js"></script>
+    <script>
+$(document).ready(function(){
+    $(".btn-action").click(function(){
+        $.each($("div[data-name]"), function(i, v) {
+            console.log('index: ' + i)
+            console.log('attr: ' + $(v).attr('data-name'))
+        });
+    });
+});
+</script>
+</head>
+
+iterate div with attribute data-name and show value
+<div id="myDiv">
+    text
+</div>
+<div id="sel1" data-name="dsad"></div>
+<div id="sel2" data-name="dsad11"></div>
+<div id="sel3" data-name="dsad13"></div>
+<input type="button" class="btn-action" title="iterate" value="iterate"/>
+
+</body>
+</html>

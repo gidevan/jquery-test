@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="libs/jquery-3.1.1.js"></script>
+    <script>
+$(document).ready(function(){
+    $(".replace").click(function(){
+        $("#myDiv").replaceWith("<h1>Replaced Content!</h1>");
+    });
+});
+</script>
+</head>
+
+replace html content of div
+<div id="myDiv">
+    content
+</div>
+<input type="button" class="replace" title="replace content" value="replace content"/>
+
+</body>
+</html>

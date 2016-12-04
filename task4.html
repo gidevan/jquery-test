@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="libs/jquery-3.1.1.js"></script>
+    <script>
+$(document).ready(function(){
+    var a;
+     var b = 5;
+     var c = null;
+    $(".btn-action").click(function(){
+        if ($.type(a) === "undefined") {
+            console.log('a is undefined')
+        } else {
+            console.log('a is not undefined: ' + a + " : " + $.type(a))
+        }
+        if ($.type(a) === 'null') {
+            console.log('a is null')
+        } else {
+            console.log('a is not null: ' + a+ " : " + $.type(a))
+        }
+        if ($.type(b) === "undefined") {
+            console.log('b is undefined')
+        } else {
+            console.log('b is not undefined: ' + b + " : " + $.type(b))
+        }
+        if ($.type(c) === "undefined") {
+            console.log('c is undefined')
+        } else {
+            console.log('c is not undefined: ' + c + " : " + $.type(c))
+        }
+
+        if ($.type(c) === 'null') {
+            console.log('c is null')
+        } else {
+            console.log('c is not null: ' + c + " : " + $.type(c))
+        }
+    });
+});
+</script>
+</head>
+
+Check is variable is undefined
+<div id="myDiv">
+    text
+</div>
+<input type="button" class="btn-action" title="change content" value="change content"/>
+
+</body>
+</html>

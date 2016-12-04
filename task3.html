@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="libs/jquery-3.1.1.js"></script>
+    <script>
+$(document).ready(function(){
+    $(".btn-action").click(function(){
+        $("#myDiv").text("Hello!");
+    });
+});
+</script>
+</head>
+
+Change text in the div with hello.
+<div id="myDiv">
+    text
+</div>
+<input type="button" class="btn-action" title="change content" value="change content"/>
+
+</body>
+</html>
