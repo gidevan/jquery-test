@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        span: {font-size: 1.3em}
+        .div1, .div1-prevent {color: red; padding 5px; height: 80px; width: 80px; border: 1px solid red}
+        .div2, .div2-prevent {color: green; padding 5px; height: 60px; width: 60px; border: 1px solid green}
+        .div3, .div3-prevent {color: blue; padding 5px; height: 40px; width: 40px;border: 1px solid blue}
+    </style>
+    <script src="libs/jquery-3.1.1.js"></script>
+    <script>
+        $(document).ready(function(){
+
+            $(".div1").click(function(){
+                alert("div1 click")
+            });
+            $(".div2").click(function(){
+                alert("div2 click")
+            });
+            $(".div3").click(function(){
+                alert("div3 click")
+            });
+            $(".div1-prevent").click(function(event){
+                alert("div1-prevent click")
+            });
+            $(".div2-prevent").click(function(event){
+                event.stopPropagation ? event.stopPropagation() : (event.cancelBubble=true)
+                alert("div2-prevent click")
+            });
+            $(".div3-prevent").click(function(event){
+                event.stopPropagation ? event.stopPropagation() : (event.cancelBubble=true)
+                alert("div3-prevent click")
+            });
+
+        });
+    </script>
+</head>
+<body>
+    Bubbeling:
+    <div class="div1">
+        div1
+        <div class="div2">
+            div2
+            <div class="div3">
+                div3
+            </div>
+        </div>
+    </div>
+prevent bubbeling
+    <div class="div1-prevent">
+        div1
+        <div class="div2-prevent">
+            div2
+            <div class="div3-prevent">
+                div3
+            </div>
+        </div>
+    </div>
+</body>
+</html>
